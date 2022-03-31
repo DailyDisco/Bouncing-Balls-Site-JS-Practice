@@ -142,9 +142,11 @@ while (balls.length < 25) {
 
 
 function loop() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-    ctx.fillRect(0, 0, width, height);
- 
+    /*
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)'; //this creates a slight transperant white on the screen.
+    ctx.fillRect(0, 0, width, height); //tells a portion of the screen to fill.
+    */
+    
     for (const ball of balls) {
       ball.draw();
       ball.update();
