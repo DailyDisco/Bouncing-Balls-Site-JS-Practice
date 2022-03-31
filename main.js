@@ -122,7 +122,7 @@ const balls = [];
 
 
 //the while loop creates new instances of the Ball() class.
-while (balls.length < 25) {
+while (balls.length < 50) {
     const size = random(10, 20);
     const ball = new Ball(
         //ball position is always drawn at least one ball width... ?
