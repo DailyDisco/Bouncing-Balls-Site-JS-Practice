@@ -95,8 +95,23 @@ class Ball {
         this.x += this.velX; //takes the existing x location and adds the velocity to it so you can redraw the "frames" it creates the appereance of animation and motion.
         this.y += this.velY; //takes the existing y location and adds the y velocity to it.
     }
+    
 
 
+    //this is used so that the balls know when they've hit one another
+    collisionDetect() {
+        for (const ball of balls) {
+           if (!(this === ball)) {
+              const dx = this.x - ball.x;
+              const dy = this.y - ball.y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+     
+              if (distance < this.size + ball.size) {
+                ball.color = this.color = randomRGB();
+              }
+           }
+        }
+     }
 }
 
 
